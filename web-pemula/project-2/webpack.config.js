@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    clean: true
+    clean: true,
   },
   module: {
     rules: [
@@ -20,18 +20,18 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
-      inject: 'body'
-    })
+      inject: 'body',
+    }),
   ],
   devServer: {
     static: {
@@ -39,7 +39,7 @@ module.exports = {
     },
     compress: true,
     port: 8080,
-    open: true
+    open: true,
   },
-  mode: 'development'
+  mode: 'development',
 };
